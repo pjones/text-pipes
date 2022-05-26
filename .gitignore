@@ -12,3 +12,4 @@ cabal-dev
 /.stack-work/
 /cabal.project.local
 /.cabal/
+/.cache/
