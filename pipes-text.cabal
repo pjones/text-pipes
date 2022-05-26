@@ -59,8 +59,8 @@ common dependencies
     , pipes-parse        ^>=3.0.0
     , pipes-safe         >=2.1     && <2.4
     , streaming-commons  >=0.1     && <0.3
-    , text               >=0.11.2  && <1.3
-    , transformers       >=0.2.0.0 && <0.6
+    , text               >=0.11.2  && <2.1
+    , transformers       >=0.2.0.0 && <0.7
 
 common options
   default-language: Haskell2010
