@@ -67,9 +67,9 @@ fileParser0 = do
     parseText :: Monad m => MaybeT (StateT (Producer Text m x) m) (Text, Int)
     parseText = do
       nameLength <- parseNumber
-      names <- zoom (Txt.splitAt nameLength) $ (lift drawAll)
+      names <- zoom (Txt.splitAt nameLength) (lift drawAll)
       contentLength <- parseNumber
-      return $! (T.concat names, contentLength)
+      return (T.concat names, contentLength)
 
 -- here we disaggregate the little Text parsers but still apply them with `zoom utf8`
 -- this makes no difference

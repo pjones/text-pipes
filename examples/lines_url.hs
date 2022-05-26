@@ -26,10 +26,10 @@ main = do
     withHTTP req m $ \resp ->
       void $
         runEffect $
-          number_lines_of (responseBody resp ^. utf8 . lines) >-> toHandle IO.stdout
+          numberLinesOf (responseBody resp ^. utf8 . lines) >-> toHandle IO.stdout
 
-number_lines_of :: Monad m => FreeT (Producer Text m) m r -> Producer Text m r
-number_lines_of = number_loop (1 :: Int)
+numberLinesOf :: Monad m => FreeT (Producer Text m) m r -> Producer Text m r
+numberLinesOf = number_loop (1 :: Int)
   where
     number_loop n free = do
       fproducer <- lift $ runFreeT free

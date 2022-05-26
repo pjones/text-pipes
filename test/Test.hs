@@ -59,7 +59,7 @@ t_utf8_incr_mixed = do
   txt <- genUnicode
   let chunkSize = mod n 7 + 1
   forAll (vector 9) $
-    (roundtrip . chunk chunkSize . appendBytes txt) `eq` (appendBytes txt)
+    (roundtrip . chunk chunkSize . appendBytes txt) `eq` appendBytes txt
   where
     roundtrip :: [B.ByteString] -> B.ByteString
     roundtrip bss = go PE.streamDecodeUtf8 B.empty bss
