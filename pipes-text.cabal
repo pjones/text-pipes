@@ -1,6 +1,6 @@
 cabal-version:      2.2
 name:               pipes-text
-version:            1.0.0
+version:            1.0.1
 synopsis:           properly streaming text
 description:
   The organization of this package follows the rule:
@@ -84,8 +84,6 @@ library
       Pipes.Prelude.Text
       Pipes.Text.IO
       Pipes.Text.Tutorial
-
-    build-depends:   text >=0.11.3 && <1.3
 
 -- test-suite test
 --   import:         options, dependencies

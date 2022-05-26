@@ -6,6 +6,10 @@
 
 * The `noio` flag is deprecated and will be removed in the next major release.
 
+* Minor releases:
+
+  - 1.0.1: Build on GHC 9.x and open dependency bounds.
+
 # Version 0.0.0.12
 
 * Opposing lenses for `lines` and `unlines` and `words` and `unwords`.
