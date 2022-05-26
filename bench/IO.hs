@@ -13,4 +13,4 @@ big = "../../examples/txt/words2.txt"
 
 textaction = T.readFile big >>= T.putStrLn
 
-pipeaction = runEffect $ for ((TP.readFile big) >> return ()) (lift . T.putStrLn)
+pipeaction = runEffect $ for (void $ TP.readFile big) (lift . T.putStrLn)

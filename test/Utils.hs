@@ -67,7 +67,7 @@ genUnicode = fmap fromString string
       where
         loop = do
           x <- gen
-          if or (map ($ x) bad)
+          if any ($ x) bad
             then loop
             else return x
 
